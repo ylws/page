@@ -120,6 +120,7 @@ export default {
   },
   created () {
     this.halfPageShow = this.pageShow ? Math.round(this.pageShow / 2) : 4
+    this.jumpPageVal = this.pageVal
   },
   props: {
     firstLast: { // 首页末页开关
@@ -153,10 +154,6 @@ export default {
     totalNum: { // 总条数
       type: Number,
       default: 0
-    },
-    jumpPageVal: { // 跳转页码
-      type: Number,
-      default: 1
     },
     pageSize: { // 分页条数
       type: Number,
