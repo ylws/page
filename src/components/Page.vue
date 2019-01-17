@@ -43,7 +43,7 @@
     :class="pageVal !== item ? 'normal' : 'current'"
     href="javascript:void(0)"
   >
-    {{item}}
+    {{item}}-1
   </a>
   <a
     v-for="item in ((totalPage < halfPageShow ? halfPageShow : totalPage ) - halfPageShow)"
@@ -175,7 +175,7 @@ export default {
   },
   methods: {
     jumpToFn (item) {
-      let temp = 0
+      let temp = 1
       if (typeof item === 'string') {
         if (item === 'next') {
           temp = this.pageVal + 1
@@ -200,6 +200,7 @@ export default {
         }
       } else {
         if (item === this.pageVal) {
+          temp = this.pageVal
           // console.log('点击的是当前分页', item)
         } else {
           // console.log('点击的是其他分页，', item)
