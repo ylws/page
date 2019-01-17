@@ -43,7 +43,7 @@
     :class="pageVal !== item ? 'normal' : 'current'"
     href="javascript:void(0)"
   >
-    {{item}}-1
+    {{item}}
   </a>
   <a
     v-for="item in ((totalPage < halfPageShow ? halfPageShow : totalPage ) - halfPageShow)"
